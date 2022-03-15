@@ -1,0 +1,1 @@
+function core:teleport/oneway/main
