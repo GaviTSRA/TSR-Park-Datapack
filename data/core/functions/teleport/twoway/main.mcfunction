@@ -18,12 +18,12 @@ execute if entity @e[tag=tpPlayer2, distance=..1] run scoreboard players add @e[
 execute if entity @e[tag=tpPlayer2, distance=..1] run tag @s add run 
 execute if entity @e[tag=tpPlayer2, distance=..1] run execute at @e[tag=tps, distance=1..] if score @s tp3 = @e[tag=tps, distance=..1, limit=1] tp3 run tag @e[tag=tps, distance=..1, limit=1] add run
 # Add the tp cooldown tag to the player to tp
-execute if entity @e[tag=tpPlayer2, distance=..1, scores={tp2=20..}] run tag @e[tag=tpPlayer2,  distance=..1] add justTped
+execute if entity @e[tag=tpPlayer2, distance=..1, scores={tp2=40..}] run tag @e[tag=tpPlayer2,  distance=..1] add justTped
 # Tp the player
-execute if entity @e[tag=tpPlayer2, distance=..1, scores={tp2=20..}] run execute at @e[tag=tps, distance=1..] if score @s tp3 = @e[tag=tps, distance=..1, limit=1] tp3 run tp @e[tag=tpPlayer2] ~ ~ ~
+execute if entity @e[tag=tpPlayer2, distance=..1, scores={tp2=40..}] run execute at @e[tag=tps, distance=1..] if score @s tp3 = @e[tag=tps, distance=..1, limit=1] tp3 run tp @e[tag=tpPlayer2] ~ ~ ~
 
 ## Cleanup
 # Reset the tp timer scoreboard for the tped player
 scoreboard players set @e[tag=!tpPlayer2, distance=..3] tp2 0
 # Remove the tpPlayer2 tag of the tped player
-tag @e[tag=tpPlayer2, distance=..1] remove tpPlayer2
+tag @e[tag=tpPlayer2, distance=1..] remove tpPlayer2
