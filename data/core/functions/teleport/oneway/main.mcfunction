@@ -1,4 +1,4 @@
-function core:teleport/oneway/particles
+execute as @e[type=minecraft:armor_stand, tag=tp] at @s run function core:teleport/oneway/particles
 
 ## Teleportation
 # Update timer
