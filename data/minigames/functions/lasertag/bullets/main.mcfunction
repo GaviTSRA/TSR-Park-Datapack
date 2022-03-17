@@ -4,3 +4,4 @@ execute as @e[tag=lasertagBullet] at @s run function minigames:lasertag/bullets/
 
 # Update player shoot cooldowns
 execute as @a[scores={lasertagCooldown=1..}] run scoreboard players remove @s lasertagCooldown 1
+scoreboard players set @a rc 0
